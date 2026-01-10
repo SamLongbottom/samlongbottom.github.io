@@ -126,26 +126,41 @@ main,
   text-decoration: underline;
 }
 
-/* Events Page */
+/* Events page – 3 column layout */
 .events-content {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.section-heading {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+.event-row {
+  display: grid;
+  grid-template-columns: 60px 400px 1fr; /* second and third columns wider */
+  column-gap: 1.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.event-date {
+  text-align: left;
+  white-space: nowrap;
+  font-size: 1rem;
 }
 
 .event-title {
+  text-align: right;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.event p {
-  margin-bottom: 1.5rem;
+.event-info {
+  text-align: left;
   font-size: 1rem;
+  display: flex;
+  flex-direction: column; /* force children onto separate lines */
+  gap: 0.25rem; /* space between each line */
+}
+
+.event-info div {
+  display: block; /* ensure each child is a block */
 }
 
 /* Home Page Image */
